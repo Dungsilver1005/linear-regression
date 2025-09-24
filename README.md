@@ -1,0 +1,1 @@
+Đây là 2 dự án nhỏ mình làm để thực hành những gì đã biết, ngoài ra các thuật toán về regression khác có thể làm tối ưu hóa mô hình hơn như Ridge regression và Lasso regression, còn một dự án kia thì mình làm để thực hành thuật toán classification cơ bản trong thời gian gấp rút cho nên nhiều cái chưa được chuyên nghiệp. 
