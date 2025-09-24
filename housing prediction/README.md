@@ -29,8 +29,7 @@ x).
 Ví dụ: dự đoán giá nhà dựa trên diện tích, số phòng, vị trí…
 
 ---
-lang: vi
-title: Công thức Linear Regression
+Công thức Linear Regression
 ---
 
 ## 2. Công thức cơ bản
