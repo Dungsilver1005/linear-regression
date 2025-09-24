@@ -37,7 +37,11 @@ title: Công thức Linear Regression
 
 - **Hồi quy tuyến tính đơn (1 biến đầu vào):**
 
-\\( y = \beta_0 + \beta_1 x + \varepsilon \\)
+$$
+y = \beta_0 + \beta_1 x + \varepsilon
+$$
+
+
 
 - *y*: giá trị dự đoán (output)
 - *x*: biến đầu vào (input)
@@ -47,26 +51,28 @@ title: Công thức Linear Regression
 
 - **Hồi quy tuyến tính đa biến (nhiều biến đầu vào):**
 
-\\( y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_p x_p + \varepsilon \\)
+$$
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_p x_p + \varepsilon
+$$
 
 (Trong đó \(p\) là số biến đầu vào)
 
 ## 3. Mục tiêu mô hình
 
-Tìm các hệ số \( \beta_0, \beta_1, \ldots \) sao cho **tổng bình phương sai số nhỏ nhất** (Least Squares):
+Tìm các hệ số $$ \beta_0, \beta_1, \ldots $$ sao cho **tổng bình phương sai số nhỏ nhất** (Least Squares):
 
-Minimize \( \sum (y_i - \hat{y}_i)^2 \)
+Minimize $$ \sum (y_i - \hat{y}_i)^2 $$
 
 ## 4. Các giả định của Linear Regression
 
-- Quan hệ tuyến tính giữa \(x\) và \(y\).
+- Quan hệ tuyến tính giữa $$x$$ và $$y$$.
 - Sai số độc lập và phân phối chuẩn.
 - Độ phân tán sai số không đổi (homoscedasticity).
 - Không có đa cộng tuyến nghiêm trọng giữa các biến độc lập.
 
 ## 5. Đánh giá mô hình
 
-- \(R^2\) (coefficient of determination) — mức độ giải thích của mô hình.
+- R^2 (coefficient of determination) — mức độ giải thích của mô hình.
 - **MSE / RMSE** — trung bình bình phương sai số.
 
 
