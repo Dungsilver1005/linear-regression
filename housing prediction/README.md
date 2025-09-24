@@ -57,7 +57,7 @@ $$
 
 ## 3. Mục tiêu mô hình
 
-Tìm các hệ số \( \beta_0, \beta_1, \ldots \) sao cho **tổng bình phương sai số nhỏ nhất** (Least Squares):
+Tìm các hệ số $\beta_0, \beta_1, \ldots$  sao cho **tổng bình phương sai số nhỏ nhất** (Least Squares):
 
 Minimize:
 
