@@ -17,7 +17,7 @@ I. Bước chuẩn bị
 + Sau cùng là một vài kĩ thuật đơn giản để xử lí dữ liệu sau đó tiến hành training model ( encoding , ....)
 
 II. Hiểu biết về mô hình 
-1. Khái niệm
+## 1. Khái niệm
 
 Hồi quy tuyến tính là một thuật toán thống kê và Machine Learning dùng để dự đoán một biến liên tục (biến mục tiêu 
 𝑦
