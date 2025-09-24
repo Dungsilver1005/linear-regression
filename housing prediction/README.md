@@ -20,7 +20,6 @@ Kết quả khi sử dụng mô hình linear regression cũng khá ổn ( thực
 ## 1. Khái niệm
 
 Hồi quy tuyến tính là một thuật toán thống kê và Machine Learning dùng để dự đoán một biến liên tục (biến mục tiêu 
-𝑦
 y) dựa trên một hoặc nhiều biến đầu vào (features 
 𝑥
 x).
@@ -58,7 +57,7 @@ $$
 
 ## 3. Mục tiêu mô hình
 
-Tìm các hệ số $$ \beta_0, \beta_1, \ldots $$ sao cho **tổng bình phương sai số nhỏ nhất** (Least Squares):
+Tìm các hệ số \( \beta_0, \beta_1, \ldots \) sao cho **tổng bình phương sai số nhỏ nhất** (Least Squares):
 
 Minimize:
 
