@@ -61,7 +61,11 @@ $$
 
 Tìm các hệ số $$ \beta_0, \beta_1, \ldots $$ sao cho **tổng bình phương sai số nhỏ nhất** (Least Squares):
 
-Minimize $$ \sum (y_i - \hat{y}_i)^2 $$
+Minimize:
+
+$$
+\sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+$$
 
 ## 4. Các giả định của Linear Regression
 
