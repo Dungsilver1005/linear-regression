@@ -28,153 +28,47 @@ x).
 
 Ví dụ: dự đoán giá nhà dựa trên diện tích, số phòng, vị trí…
 
-<!doctype html>
-<html lang="vi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Công thức Linear Regression</title>
+---
+lang: vi
+title: Công thức Linear Regression
+---
 
-  <!-- MathJax để render công thức LaTeX -->
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-      svg: { fontCache: 'global' }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+## 2. Công thức cơ bản
 
-  <style>
-    :root{
-      --bg:#0f1113;
-      --muted:#bfc7cc;
-      --accent:#ffffff;
-      --maxw:900px;
-    }
-    html,body{
-      height:100%;
-      margin:0;
-      background:linear-gradient(180deg,#0b0c0d 0%, #101214 100%);
-      color:var(--accent);
-      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-    .container{
-      max-width:var(--maxw);
-      margin:48px auto;
-      padding:32px;
-    }
-    h2{
-      margin:0 0 18px 0;
-      font-size:28px;
-    }
-    .section{
-      background:rgba(255,255,255,0.03);
-      padding:22px;
-      border-radius:10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-      margin-bottom:32px;
-    }
-    .bullet-list{
-      margin:18px 0 0 0;
-      padding-left:24px;
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.6;
-    }
-    .formula {
-      text-align:center;
-      margin:20px 0;
-    }
-    .formula .line {
-      display:inline-block;
-      background:rgba(255,255,255,0.02);
-      padding:12px 18px;
-      border-radius:8px;
-      font-size:22px;
-    }
-    .sub-bullets{
-      margin-top:12px;
-      padding-left:18px;
-      color:var(--muted);
-      font-size:15px;
-    }
-    .small{
-      color:var(--muted);
-      font-size:14px;
-    }
-    hr{
-      border: none;
-      border-top:1px solid rgba(255,255,255,0.1);
-      margin:24px 0;
-    }
-  </style>
-</head>
-<body>
-  <main class="container">
-    <!-- Phần 2 -->
-    <div class="section">
-      <h2>2. Công thức cơ bản</h2>
-      <ul class="bullet-list">
-        <li>
-          <strong>Hồi quy tuyến tính đơn (1 biến đầu vào):</strong>
-          <div class="formula">
-            <div class="line">
-              \( y = \beta_0 + \beta_1 x + \varepsilon \)
-            </div>
-          </div>
-          <ul class="sub-bullets">
-            <li><em>y</em>: giá trị dự đoán (output)</li>
-            <li><em>x</em>: biến đầu vào (input)</li>
-            <li><em>β₀</em>: hệ số chặn (intercept)</li>
-            <li><em>β₁</em>: hệ số góc (slope)</li>
-            <li><em>ε</em>: sai số</li>
-          </ul>
-        </li>
+- **Hồi quy tuyến tính đơn (1 biến đầu vào):**
 
-        <li style="margin-top:16px;">
-          <strong>Hồi quy tuyến tính đa biến (nhiều biến đầu vào):</strong>
-          <div class="formula">
-            <div class="line">
-              \( y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_p x_p + \varepsilon \)
-            </div>
-          </div>
-          <p class="small">(Trong đó \(p\) là số biến đầu vào)</p>
-        </li>
-      </ul>
-    </div>
+\\( y = \beta_0 + \beta_1 x + \varepsilon \\)
 
-    <!-- Phần 3 + 4 -->
-    <div class="section">
-      <h2>3. Mục tiêu mô hình</h2>
-      <p>Tìm các hệ số \( \beta_0, \beta_1, \ldots \) sao cho <strong>tổng bình phương sai số nhỏ nhất</strong> (Least Squares):</p>
-      <div class="formula">
-        <div class="line">
-          Minimize \( \sum (y_i - \hat{y}_i)^2 \)
-        </div>
-      </div>
+- *y*: giá trị dự đoán (output)
+- *x*: biến đầu vào (input)
+- *β₀*: hệ số chặn (intercept)
+- *β₁*: hệ số góc (slope)
+- *ε*: sai số
 
-      <hr>
+- **Hồi quy tuyến tính đa biến (nhiều biến đầu vào):**
 
-      <h2>4. Các giả định của Linear Regression</h2>
-      <ul class="bullet-list">
-        <li>Quan hệ tuyến tính giữa \(x\) và \(y\).</li>
-        <li>Sai số độc lập và phân phối chuẩn.</li>
-        <li>Độ phân tán sai số không đổi (homoscedasticity).</li>
-        <li>Không có đa cộng tuyến nghiêm trọng giữa các biến độc lập.</li>
-      </ul>
-    </div>
+\\( y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_p x_p + \varepsilon \\)
 
-    <!-- Phần 5 -->
-    <div class="section">
-      <h2>5. Đánh giá mô hình</h2>
-      <ul class="bullet-list">
-        <li>\(R^2\) (coefficient of determination) – mức độ giải thích của mô hình.</li>
-        <li><strong>MSE / RMSE</strong> – trung bình bình phương sai số.</li>
-      </ul>
-    </div>
-  </main>
-</body>
-</html>
+(Trong đó \(p\) là số biến đầu vào)
+
+## 3. Mục tiêu mô hình
+
+Tìm các hệ số \( \beta_0, \beta_1, \ldots \) sao cho **tổng bình phương sai số nhỏ nhất** (Least Squares):
+
+Minimize \( \sum (y_i - \hat{y}_i)^2 \)
+
+## 4. Các giả định của Linear Regression
+
+- Quan hệ tuyến tính giữa \(x\) và \(y\).
+- Sai số độc lập và phân phối chuẩn.
+- Độ phân tán sai số không đổi (homoscedasticity).
+- Không có đa cộng tuyến nghiêm trọng giữa các biến độc lập.
+
+## 5. Đánh giá mô hình
+
+- \(R^2\) (coefficient of determination) — mức độ giải thích của mô hình.
+- **MSE / RMSE** — trung bình bình phương sai số.
+
 
 
 
